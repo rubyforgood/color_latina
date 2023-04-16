@@ -11,6 +11,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import Campaign from './campaigns';
+import Volunteer from './volunteers';
 
 const drawerWidth = 240;
 
@@ -67,7 +68,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Typography paragraph>TEST HOME</Typography>} />
             <Route path="/campaigns" element={<Campaign />} />
-            <Route path="/volunteers" element={<Typography paragraph>TEST volunteers</Typography>} />
+            <Route path="/volunteers" element={<Volunteer />} />
             <Route path="/performance" element={<Typography paragraph>TEST performance</Typography>} />
           </Routes>
         </Box>
