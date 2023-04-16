@@ -9,9 +9,11 @@ import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
+import Button from '@mui/material/Button';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import Campaign from './campaigns';
 import Volunteer from './volunteers';
+import NewCampaign from './newCampaign';
 
 const drawerWidth = 240;
 
@@ -45,6 +47,7 @@ export default function App() {
           <Toolbar />
           <Divider />
           <List>
+            <Button variant="contained" href="/newCampaign">Create Campaign</Button>
             <ListItemButton component={Link} to="/">
               <ListItemText primary="Home" />
             </ListItemButton>
@@ -70,6 +73,8 @@ export default function App() {
             <Route path="/campaigns" element={<Campaign />} />
             <Route path="/volunteers" element={<Volunteer />} />
             <Route path="/performance" element={<Typography paragraph>TEST performance</Typography>} />
+            <Route path="/newCampaign" element={<NewCampaign />} />
+
           </Routes>
         </Box>
       </Box>
